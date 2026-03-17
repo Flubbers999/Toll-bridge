@@ -10,10 +10,16 @@ class Vehicle:
         pass
     
 class Motorbike (Vehicle):
+    def __init__(self, reg, weight):
+        super().__init__(reg, weight)
+
     def CalculateFee(self):
         return 3
 
 class Car (Vehicle):
+    def __init__(self, reg, weight):
+        super().__init__(reg, weight)
+
     def CalculateFee(self):
         fee: float = 5
         if self.Weight > 1590:
@@ -22,6 +28,9 @@ class Car (Vehicle):
         return fee + extra
     
 class Lorry (Vehicle):
+    def __init__(self, reg, weight):
+        super().__init__(reg, weight)
+
     def CalculateFee(self):
         if self.Weight <= 8000:
             return 10
