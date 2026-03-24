@@ -6,7 +6,7 @@ class Vehicle:
         self.Weight = weight
     
     @abstractmethod
-    def CalculateFee(self):
+    def CalculateFee(self) -> float:
         pass
     
 class Motorbike (Vehicle):
